@@ -1,0 +1,84 @@
+
+// Ajuste BRA50 Trading Robot
+// Developer: Forex Robot Easy Team (forexroboteasy.com)
+
+// Define necessary constants and variables
+double adjustmentPoint;
+bool isAdjustmentPointHighlighted = false;
+
+// Function to calculate the adjustment point
+double CalculateAdjustmentPoint()
+{
+    // Implement the logic to calculate the adjustment point based on the futures contract data
+    // ...
+    return adjustmentPoint;
+}
+
+// Function to highlight the adjustment point on the chart
+void HighlightAdjustmentPoint()
+{
+    // Implement the logic to highlight the adjustment point on the BRA50 active trades chart
+    // ...
+    isAdjustmentPointHighlighted = true;
+}
+
+// Function to display the adjustment point information
+void DisplayAdjustmentPointInformation()
+{
+    // Implement the logic to display the adjustment point information on the user-friendly interface
+    // ...
+}
+
+// Entry point of the program
+int OnInit()
+{
+    // Calculate the adjustment point
+    adjustmentPoint = CalculateAdjustmentPoint();
+
+    // Highlight the adjustment point on the chart
+    HighlightAdjustmentPoint();
+
+    // Display the adjustment point information
+    DisplayAdjustmentPointInformation();
+
+    return INIT_SUCCEEDED;
+}
+
+// Main program loop
+void OnTick()
+{
+    // Implement the main trading logic here
+    // ...
+}
+
+// Program termination
+void OnDeinit(const int reason)
+{
+    // Implement any necessary cleanup logic here
+    // ...
+}
+
+// Program entry point
+void OnStart()
+{
+    // Start the program loop
+    while (!IsStopped())
+    {
+        OnTick();
+        Sleep(1000); // Sleep for 1 second before executing the next tick
+    }
+}
+
+// Program initialization
+void OnInit()
+{
+    // Initialize necessary variables and settings
+    // ...
+}
+
+// Program termination
+void OnDeinit(const int reason)
+{
+    // Perform any necessary cleanup before terminating the program
+    // ...
+}
